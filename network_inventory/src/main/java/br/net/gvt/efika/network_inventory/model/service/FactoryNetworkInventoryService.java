@@ -11,11 +11,11 @@ package br.net.gvt.efika.network_inventory.model.service;
  */
 public class FactoryNetworkInventoryService {
 
-    public NetworkInventoryService newNetworkInventoryService() {
+    public static NetworkInventoryService newNetworkInventoryService() {
         return new NetworkInventoryServiceImpl();
     }
 
-    public NetworkInventorySigresService newNetworkInventorySigresService() {
+    public static NetworkInventorySigresService newNetworkInventorySigresService() {
         return new NetworkInventorySigresServiceImpl();
     }
 
