@@ -5,6 +5,9 @@
  */
 package br.net.gvt.efika.network_inventory.model.service;
 
+import br.net.gvt.efika.customer.model.dto.CustomerRequest;
+import br.net.gvt.efika.efika_customer.model.customer.EfikaCustomer;
+import br.net.gvt.efika.efika_customer.model.customer.InventarioRede;
 import br.net.gvt.efika.network_inventory.model.dto.ClientesVizinhosRequestDTO;
 import br.net.gvt.efika.network_inventory.model.dto.ClientesVizinhosResponseDTO;
 import br.net.gvt.efika.util.dao.http.Urls;
@@ -17,6 +20,14 @@ public class NetworkInventoryServiceImpl implements NetworkInventoryService {
         return (ClientesVizinhosResponseDTO) new FactoryHttpDAOAbstract<>(ClientesVizinhosResponseDTO.class)
                 .createWithoutProxy()
                 .post(Urls.NETWORK_INVENTORY_VIZINHOS.getUrl(), request);
+    }
+
+    @Override
+    public InventarioRede consultar(EfikaCustomer cust) throws Exception {
+        CustomerRequest req = new CustomerRequest();
+        req.setCust(cust);
+        req.setExecutor("customerAPI");
+        return (InventarioRede) new FactoryHttpDAOAbstract<>(InventarioRede.class).createWithoutProxy().post(Urls.NETWORK_INVENTORY.getUrl(), req);
     }
 
 }

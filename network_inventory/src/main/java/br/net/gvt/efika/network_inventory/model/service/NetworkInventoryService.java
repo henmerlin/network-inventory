@@ -5,6 +5,8 @@
  */
 package br.net.gvt.efika.network_inventory.model.service;
 
+import br.net.gvt.efika.efika_customer.model.customer.EfikaCustomer;
+import br.net.gvt.efika.efika_customer.model.customer.InventarioRede;
 import br.net.gvt.efika.network_inventory.model.dto.ClientesVizinhosRequestDTO;
 import br.net.gvt.efika.network_inventory.model.dto.ClientesVizinhosResponseDTO;
 
@@ -15,5 +17,7 @@ import br.net.gvt.efika.network_inventory.model.dto.ClientesVizinhosResponseDTO;
 public interface NetworkInventoryService {
 
     public ClientesVizinhosResponseDTO consultarVizinhos(ClientesVizinhosRequestDTO request) throws Exception;
+
+    public InventarioRede consultar(EfikaCustomer cust) throws Exception;
 
 }
