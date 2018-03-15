@@ -14,7 +14,7 @@ import br.net.gvt.efika.network_inventory.model.dto.ClientesVizinhosResponseDTO;
  *
  * @author G0042204
  */
-public interface NetworkInventoryService {
+public interface OfflineNetworkInventoryService {
 
     public ClientesVizinhosResponseDTO consultarVizinhos(ClientesVizinhosRequestDTO request) throws Exception;
 

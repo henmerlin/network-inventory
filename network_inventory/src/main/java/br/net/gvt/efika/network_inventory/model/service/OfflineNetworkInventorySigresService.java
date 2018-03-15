@@ -13,7 +13,7 @@ import br.net.gvt.efika.util.dao.http.request.StringParameterRequest;
  *
  * @author G0042204
  */
-public interface NetworkInventorySigresService {
+public interface OfflineNetworkInventorySigresService {
     
     public NetworkInventorySigresMetalicoDTO getDslamDetail(StringParameterRequest request) throws Exception;
     

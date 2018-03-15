@@ -13,7 +13,7 @@ import br.net.gvt.efika.network_inventory.model.dto.ClientesVizinhosResponseDTO;
 import br.net.gvt.efika.util.dao.http.Urls;
 import br.net.gvt.efika.util.dao.http.factory.FactoryHttpDAOAbstract;
 
-public class NetworkInventoryServiceImpl implements NetworkInventoryService {
+public class OfflineNetworkInventoryServiceImpl implements OfflineNetworkInventoryService {
 
     @Override
     public ClientesVizinhosResponseDTO consultarVizinhos(ClientesVizinhosRequestDTO request) throws Exception {

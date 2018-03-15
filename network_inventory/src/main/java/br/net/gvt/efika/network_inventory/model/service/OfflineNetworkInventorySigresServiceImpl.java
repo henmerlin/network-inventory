@@ -11,7 +11,7 @@ import br.net.gvt.efika.util.dao.http.Urls;
 import br.net.gvt.efika.util.dao.http.factory.FactoryHttpDAOAbstract;
 import br.net.gvt.efika.util.dao.http.request.StringParameterRequest;
 
-public class NetworkInventorySigresServiceImpl implements NetworkInventorySigresService {
+public class OfflineNetworkInventorySigresServiceImpl implements OfflineNetworkInventorySigresService {
 
     @Override
     public NetworkInventorySigresMetalicoDTO getDslamDetail(StringParameterRequest request) throws Exception {
