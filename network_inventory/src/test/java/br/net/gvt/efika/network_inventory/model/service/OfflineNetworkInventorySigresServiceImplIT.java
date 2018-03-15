@@ -5,8 +5,8 @@
  */
 package br.net.gvt.efika.network_inventory.model.service;
 
+import br.net.gvt.efika.customer.model.dto.GenericRequest;
 import br.net.gvt.efika.network_inventory.model.dto.NetworkInventorySigresMetalicoDTO;
-import br.net.gvt.efika.util.dao.http.request.StringParameterRequest;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -42,7 +42,7 @@ public class OfflineNetworkInventorySigresServiceImplIT {
     public void testGetDslamDetail() {
         try {
             System.out.println("getDslamDetail");
-            StringParameterRequest request = new StringParameterRequest();
+            GenericRequest request = new GenericRequest();
             request.setExecutor("JUnit");
             request.setParameter("BR_SPO_AC-HUA_DSL_07_00_1");
             OfflineNetworkInventorySigresServiceImpl instance = new OfflineNetworkInventorySigresServiceImpl();

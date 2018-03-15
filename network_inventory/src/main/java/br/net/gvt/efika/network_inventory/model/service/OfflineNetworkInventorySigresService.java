@@ -5,9 +5,9 @@
  */
 package br.net.gvt.efika.network_inventory.model.service;
 
+import br.net.gvt.efika.customer.model.dto.GenericRequest;
 import br.net.gvt.efika.network_inventory.model.dto.NetworkInventorySigresMetalicoDTO;
 import br.net.gvt.efika.network_inventory.model.dto.OltDetailSigresFibraDTO;
-import br.net.gvt.efika.util.dao.http.request.StringParameterRequest;
 
 /**
  *
@@ -15,8 +15,8 @@ import br.net.gvt.efika.util.dao.http.request.StringParameterRequest;
  */
 public interface OfflineNetworkInventorySigresService {
     
-    public NetworkInventorySigresMetalicoDTO getDslamDetail(StringParameterRequest request) throws Exception;
+    public NetworkInventorySigresMetalicoDTO getDslamDetail(GenericRequest request) throws Exception;
     
-    public OltDetailSigresFibraDTO getOltDetail(StringParameterRequest request) throws Exception;
+    public OltDetailSigresFibraDTO getOltDetail(GenericRequest request) throws Exception;
     
 }
