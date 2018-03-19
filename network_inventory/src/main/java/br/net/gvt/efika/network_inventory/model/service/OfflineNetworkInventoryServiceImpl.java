@@ -23,10 +23,7 @@ public class OfflineNetworkInventoryServiceImpl implements OfflineNetworkInvento
     }
 
     @Override
-    public InventarioRede consultar(EfikaCustomer cust) throws Exception {
-        CustomerRequest req = new CustomerRequest();
-        req.setCust(cust);
-        req.setExecutor("customerAPI");
+    public InventarioRede consultar(CustomerRequest req) throws Exception {
         return (InventarioRede) new FactoryHttpDAOAbstract<>(InventarioRede.class).createWithoutProxy().post(Urls.NETWORK_INVENTORY.getUrl(), req);
     }
 
