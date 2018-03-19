@@ -27,7 +27,7 @@ public class NetworkInventorySigresMetalicoDTO implements Serializable {
 
     private Integer rin;
 
-    private Integer cVlan;
+    private Integer cvlan;
 
     public NetworkInventorySigresMetalicoDTO() {
     }
@@ -88,12 +88,12 @@ public class NetworkInventorySigresMetalicoDTO implements Serializable {
         this.rin = rin;
     }
 
-    public Integer getcVlan() {
-        return cVlan;
+    public Integer getCvlan() {
+        return cvlan;
     }
 
-    public void setcVlan(Integer cVlan) {
-        this.cVlan = cVlan;
+    public void setCvlan(Integer cvlan) {
+        this.cvlan = cvlan;
     }
 
     public String getModeloDslam() {

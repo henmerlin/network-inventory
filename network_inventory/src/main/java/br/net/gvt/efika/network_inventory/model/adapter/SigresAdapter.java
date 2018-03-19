@@ -6,6 +6,7 @@
 package br.net.gvt.efika.network_inventory.model.adapter;
 
 import br.net.gvt.efika.efika_customer.model.customer.InventarioRede;
+import br.net.gvt.efika.network_inventory.model.dto.NetworkInventorySigresMetalicoDTO;
 import br.net.gvt.efika.network_inventory.model.dto.OltDetailSigresFibraDTO;
 
 /**
@@ -19,6 +20,15 @@ public class SigresAdapter {
         i.setIpDslam(oltDetail.getIpOlt());
         i.setVendorDslam(oltDetail.getVendor());
         i.setModeloDslam(oltDetail.getModel());
+        return i;
+    }
+
+    public static InventarioRede adapt(NetworkInventorySigresMetalicoDTO metalico) {
+        InventarioRede i = new InventarioRede();
+        i.setIpDslam(metalico.getIpDslam());
+        i.setVendorDslam(metalico.getFabricanteDslam());
+        i.setModeloDslam(metalico.getModeloDslam());
+        i.setRin(metalico.getRin());
         return i;
     }
 
