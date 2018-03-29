@@ -5,9 +5,9 @@
  */
 package br.net.gvt.efika.network_inventory.model.service;
 
+import br.net.gvt.efika.customer.model.dto.CustomerRequest;
+import br.net.gvt.efika.customer.model.dto.GenericRequest;
 import br.net.gvt.efika.network_inventory.model.dto.NetworkInventorySigresMetalicoDTO;
-import br.net.gvt.efika.network_inventory.model.dto.OltDetailSigresFibraDTO;
-import br.net.gvt.efika.util.dao.http.request.StringParameterRequest;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,9 +18,9 @@ import static org.junit.Assert.*;
  *
  * @author G0042204
  */
-public class NetworkInventorySigresServiceImplIT {
+public class OfflineNetworkInventorySigresServiceImplIT {
 
-    public NetworkInventorySigresServiceImplIT() {
+    public OfflineNetworkInventorySigresServiceImplIT() {
     }
 
     @AfterClass
@@ -43,10 +43,10 @@ public class NetworkInventorySigresServiceImplIT {
     public void testGetDslamDetail() {
         try {
             System.out.println("getDslamDetail");
-            StringParameterRequest request = new StringParameterRequest();
+            GenericRequest request = new CustomerRequest();
             request.setExecutor("JUnit");
             request.setParameter("BR_SPO_AC-HUA_DSL_07_00_1");
-            NetworkInventorySigresServiceImpl instance = new NetworkInventorySigresServiceImpl();
+            OfflineNetworkInventorySigresServiceImpl instance = new OfflineNetworkInventorySigresServiceImpl();
             NetworkInventorySigresMetalicoDTO result = instance.getDslamDetail(request);
             assertEquals(result.getIpDslam(), "10.18.217.110");
         } catch (Exception e) {
